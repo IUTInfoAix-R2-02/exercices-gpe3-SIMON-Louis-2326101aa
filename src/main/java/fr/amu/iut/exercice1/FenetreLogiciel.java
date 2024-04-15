@@ -98,7 +98,7 @@ public class FenetreLogiciel extends Application {
         Scene  sc1 = new Scene(bp1);
         primaryStage.setWidth( 800 );
         primaryStage.setHeight( 600 );
-        primaryStage.setTitle("Test Des Scenes");// Hauteur et largeur
+        primaryStage.setTitle("Premier exemple manipulant les conteneurs");// Hauteur et largeur
         primaryStage.setScene(sc1);
         primaryStage.show();
     }
