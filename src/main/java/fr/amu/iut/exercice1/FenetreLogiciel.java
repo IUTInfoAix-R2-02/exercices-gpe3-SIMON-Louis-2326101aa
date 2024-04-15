@@ -74,6 +74,9 @@ public class FenetreLogiciel extends Application {
         HBox subbox = new HBox(bS, space1, bC);
         subbox.setAlignment( Pos.CENTER );
 
+        VBox logb = new VBox(logpane, space2 , subbox);
+        logb.setAlignment( Pos.CENTER );
+
         HBox menum = new HBox(menuBar);
         menum.setAlignment( Pos.TOP_LEFT );
 
@@ -84,9 +87,6 @@ public class FenetreLogiciel extends Application {
 
         VBox bdp = new VBox(sepbas, basdepage);
         bdp.setAlignment( Pos.CENTER );
-
-        VBox logb = new VBox(logpane,space2 , subbox);
-        logb.setAlignment( Pos.CENTER );
 
 
         BorderPane bp1 = new BorderPane();
