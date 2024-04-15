@@ -23,6 +23,11 @@ public class FenetreLogiciel extends Application {
         Label name = new Label("Name:");
         Label email = new Label("Email:");
         Label password = new Label("Password:");
+        Label space1 = new Label("  ");
+        Label space2 = new Label(" ");
+        Label spB1 = new Label(" ");
+        Label spB2 = new Label(" ");
+        Label spB3 = new Label(" ");
 
         Menu menu1 = new Menu("File");
         Menu menu2 = new Menu("edit");
@@ -33,6 +38,7 @@ public class FenetreLogiciel extends Application {
         SeparatorMenuItem sep3 = new SeparatorMenuItem();
         SeparatorMenuItem sep4 = new SeparatorMenuItem();
         SeparatorMenuItem sep5 = new SeparatorMenuItem();
+        Separator sepbas = new Separator(Orientation.HORIZONTAL);
 
         MenuItem new1 = new MenuItem("New");
         MenuItem open = new MenuItem("Open");
@@ -64,25 +70,22 @@ public class FenetreLogiciel extends Application {
         logpane.setHgap(10);
         logpane.setAlignment( Pos.CENTER );
 
-//        GridPane buttonpane = new GridPane();
-//        buttonpane.getChildren().addAll(bS, bC);
-//        GridPane.setConstraints(bS, 0, 0);
-//        GridPane.setConstraints(bC, 1, 0);
-//        buttonpane.setVgap(10);
-//        buttonpane.setHgap(10);
+
+        HBox subbox = new HBox(bS, space1, bC);
+        subbox.setAlignment( Pos.CENTER );
 
         HBox menum = new HBox(menuBar);
         menum.setAlignment( Pos.TOP_LEFT );
 
         Separator s1 = new Separator(Orientation.VERTICAL);
-        VBox listeb = new VBox(bouton, b1, b2, b3);
+        VBox listeb = new VBox(bouton, spB1,  b1, spB2, b2, spB3, b3);
         HBox listebH = new HBox(listeb, s1);
         listeb.setAlignment( Pos.CENTER_LEFT );
 
-        VBox bdp = new VBox(basdepage);
+        VBox bdp = new VBox(sepbas, basdepage);
         bdp.setAlignment( Pos.CENTER );
 
-        VBox logb = new VBox(logpane);
+        VBox logb = new VBox(logpane,space2 , subbox);
         logb.setAlignment( Pos.CENTER );
 
 
