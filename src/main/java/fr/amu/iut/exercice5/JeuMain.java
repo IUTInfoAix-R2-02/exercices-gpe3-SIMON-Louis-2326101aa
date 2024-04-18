@@ -108,6 +108,7 @@ public class JeuMain extends Application {
                 System.out.println("Collision....");
                 javafx.application.Platform.exit();
             }
+
         });
     }
 

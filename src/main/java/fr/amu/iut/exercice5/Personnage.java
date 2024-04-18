@@ -4,6 +4,8 @@ import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
+import java.util.ArrayList;
+
 class Personnage extends Group {
     protected final static double LARGEUR_MOITIE_PERSONNAGE = 10;
     protected final static double LARGEUR_PERSONNAGE = LARGEUR_MOITIE_PERSONNAGE * 2;
