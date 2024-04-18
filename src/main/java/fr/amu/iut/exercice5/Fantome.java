@@ -39,23 +39,47 @@ public class Fantome extends Personnage {
 
     @Override
     public void deplacerAGauche() {
+        super.deplacerAGauche();
 
+        retineGauche.setCenterX(oeilGauche.getCenterX() - 1);
+        retineGauche.setCenterY(oeilGauche.getCenterY());
+
+        retineDroite.setCenterX(oeilDroit.getCenterX() - 1);
+        retineDroite.setCenterY(oeilDroit.getCenterY());
 
     }
 
     @Override
     public void deplacerADroite(double largeurJeu) {
+        super.deplacerADroite(largeurJeu);
 
+        retineGauche.setCenterX(oeilGauche.getCenterX() + 1);
+        retineGauche.setCenterY(oeilGauche.getCenterY());
+
+        retineDroite.setCenterX(oeilDroit.getCenterX() + 1);
+        retineDroite.setCenterY(oeilDroit.getCenterY());
     }
 
     @Override
     public void deplacerEnBas(double hauteurJeu) {
+        super.deplacerEnBas(hauteurJeu);
 
+        retineGauche.setCenterX(oeilGauche.getCenterX());
+        retineGauche.setCenterY(oeilGauche.getCenterY() + 1);
+
+        retineDroite.setCenterX(oeilDroit.getCenterX());
+        retineDroite.setCenterY(oeilDroit.getCenterY() + 1);
     }
 
     @Override
     public void deplacerEnHaut() {
+        super.deplacerEnHaut();
 
+        retineGauche.setCenterX(oeilGauche.getCenterX());
+        retineGauche.setCenterY(oeilGauche.getCenterY() - 1);
+
+        retineDroite.setCenterX(oeilDroit.getCenterX());
+        retineDroite.setCenterY(oeilDroit.getCenterY() - 1);
     }
 
 
