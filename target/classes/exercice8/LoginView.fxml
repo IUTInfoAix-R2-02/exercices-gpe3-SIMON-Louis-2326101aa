@@ -17,8 +17,8 @@
     <TextField fx:id="usr" GridPane.columnIndex="1" GridPane.rowIndex="1" />
     <PasswordField fx:id="pwd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-    <Button fx:id="okButton"  text="Ok" onAction="#okClicked" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <Button fx:id="canceltButton"  text="Cancel" onAction="#cancelClicked" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Button fx:id="okButton"  text="Ok" onAction="#okClicked"/>
+    <Button fx:id="canceltButton"  text="Cancel" onAction="#cancelClicked"/>
 
 <!--  à compléter pour les boutons -->
 
