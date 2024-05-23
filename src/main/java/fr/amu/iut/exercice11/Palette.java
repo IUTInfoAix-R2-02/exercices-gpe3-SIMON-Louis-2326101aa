@@ -65,20 +65,22 @@ public class Palette extends Application {
         bleu = new Button("Bleu");
 
         /* VOTRE CODE ICI */
+        texteDuHaut.setText("Cliquez sur un bouton");
 
         StringProperty couleurPanneau = new SimpleStringProperty("#000000");
-
-        texteDuHaut.setText("Cliquez sur un bouton");
         IntegerProperty nbFois = new SimpleIntegerProperty(0);
         StringProperty message = new SimpleStringProperty();
 
-        texteDuHaut.textProperty().bind(Bindings.concat(
-        message, " choisi ",  nbFois, " fois"
+        private void createBindings() {
+
+            texteDuHaut.textProperty().bind(Bindings.concat(
+                    message, " choisi ",  nbFois, " fois"
             ));
 
-        panneau.styleProperty().bind(Bindings.concat(
-                "-fx-background-color:", couleurPanneau
-        ));
+            panneau.styleProperty().bind(Bindings.concat(
+                    "-fx-background-color:", couleurPanneau
+            ));
+        };
 
         vert.setOnAction(event ->  {
             nbVert = nbVert +1;
