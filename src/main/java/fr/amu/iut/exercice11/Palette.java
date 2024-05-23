@@ -19,6 +19,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
+import java.text.NumberFormat;
+
 @SuppressWarnings("Duplicates")
 public class Palette extends Application {
 
@@ -72,22 +74,24 @@ public class Palette extends Application {
 
         texteDuHaut.textProperty().bind(Bindings.concat(
         message, " choisi ",  nbFois, " fois"
+            ));
+
+        panneau.styleProperty().bind(Bindings.concat(
+                "-fx-background-color:", couleurPanneau
         ));
 
-        //"Le Vert est une jolie couleur !"
         vert.setOnAction(event ->  {
             nbVert = nbVert +1;
             nbFois.setValue(nbVert);
             message.setValue("Vert");
-            panneau.setStyle("-fx-background-color: green");
-
+            couleurPanneau.setValue("#28b463");
         });
 
         rouge.setOnAction(event ->  {
             nbRouge = nbRouge +1;
             nbFois.setValue(nbRouge);
             message.setValue("Rouge");
-            panneau.setStyle("-fx-background-color: red");
+            couleurPanneau.setValue("#C70039");
 
         });
 
@@ -95,7 +99,7 @@ public class Palette extends Application {
             nbBleu = nbBleu +1;
             nbFois.setValue(nbBleu);
             message.setValue("Bleu");
-            panneau.setStyle("-fx-background-color: blue");
+            couleurPanneau.setValue("#2e86c1");
 
         });
 
