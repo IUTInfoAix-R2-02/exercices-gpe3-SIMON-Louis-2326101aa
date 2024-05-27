@@ -36,7 +36,6 @@ public class Palette extends Application {
     private HBox boutons;
 
     private Label texteDuBas;
-
     private StringProperty couleurPanneau;
     private IntegerProperty nbFois;
     private StringProperty message;
@@ -48,9 +47,17 @@ public class Palette extends Application {
                 message, " choisi ",  nbFois, " fois"
         )));
 
-        panneau.styleProperty().bind(Bindings.when(pasEncoreDeClic).then("").otherwise(Bindings.concat(
-                "-fx-background-color:", couleurPanneau
+        texteDuBas.textProperty().bind(Bindings.when(pasEncoreDeClic).then("").otherwise(Bindings.concat(
+                "Le ", message, " est une jolie couleure !"
         )));
+
+        panneau.styleProperty().bind(Bindings.concat(
+                "-fx-background-color:", couleurPanneau
+        ));
+
+        texteDuBas.styleProperty().bind(Bindings.concat(
+                "-fx-text-fill:", couleurPanneau
+        ));
     }
 
     @Override
@@ -76,7 +83,7 @@ public class Palette extends Application {
         rouge = new Button("Rouge");
         bleu = new Button("Bleu");
 
-        couleurPanneau = new SimpleStringProperty("#000000");
+        couleurPanneau = new SimpleStringProperty();
         nbFois = new SimpleIntegerProperty(0);
         message = new SimpleStringProperty();
 
